@@ -1,5 +1,4 @@
-# a script that prints the title of a Star Wars movie where the episode number matches a given integer 
-
+ 
 
 const request = require('request');
 
@@ -23,6 +22,6 @@ const episodeNumber = process.argv[2];
 if (!episodeNumber) {
   console.error('Please provide an episode number as a command line argument.');
 } else {
-  getMovieTitleByEpisode(episodeNumber);
-}
+  getMovieTitleByEpisode(episodeNumber);}
+
 
