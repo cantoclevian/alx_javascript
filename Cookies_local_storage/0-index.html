@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Example</title>
+</head>
+<body>
+    <h1>Cookie Example</h1>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname"><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email"><br>
+
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+        function setCookies() {
+            const firstnameInput = document.getElementById("firstname");
+            const emailInput = document.getElementById("email");
+            const firstnameValue = firstnameInput.value;
+            const emailValue = emailInput.value;
+
+            document.cookie = `firstname=${firstnameValue}`;
+            document.cookie = `email=${emailValue}`;
+
+            alert("Cookies set successfully!");
+        }
+
+        function showCookies() {
+            const cookies = document.cookie;
+            const paragraph = document.createElement("p");
+            paragraph.innerHTML = "Cookies: " + cookies;
+
+            document.body.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>
+
